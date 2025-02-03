@@ -97,7 +97,7 @@ export default function App() {
           setError("");
           setHeaderMessage(false);
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
+            `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`
           );
           if (!res.ok)
             throw new Error("Something went wrong, try again later!");
@@ -288,7 +288,7 @@ function MovieList({
           setIsLoading(true);
           setError("");
           const res =
-            await fetch(`http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}
+            await fetch(`https://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}
   `);
           if (!res.ok)
             throw new Error("Something went wrong, try again later!");
