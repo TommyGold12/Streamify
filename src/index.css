@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: url(../public/img/ddwesz2-a90c4b0e-0b52-4963-9b23-75ea42aef15e.png);
+}
+
+.container {
+  width: 90%;
+  margin: 0pc auto;
+}
+
+/**HEADER PAGE*/
+.navBar {
+  background-color: rgb(82, 82, 82, 0.5);
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+}
+
+.inputField {
+  text-align: center;
+}
+
+/*  background-color: rgb(163, 140, 168);*/
+.navBar input {
+  border-radius: 5pc;
+  padding: 5px 10px;
+  width: 60%;
+  height: fit-content;
+  font-size: 16px;
+  transition: 300ms;
+  outline: none;
+  border: none;
+  background-color: rgb(169, 169, 169, 0.5);
+  color: white;
+}
+
+.navBar input:focus {
+  width: 85%;
+}
+
+.navBar input::placeholder {
+  color: white;
+  font-size: 14px;
+}
+
+/**MAIN PAGE*/
+.main {
+  overflow: hidden;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+}
+
+/*  background-color: rgb(63, 40, 69);*/
+.mainCategory {
+  background-color: rgb(82, 82, 82, 0.5);
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 15px;
+}
+
+.mainCategory ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mainCategory ul li:last-child {
+  margin-bottom: 0;
+}
+
+.mainCategory img {
+  width: 24px;
+}
+
+.mainCategory a {
+  text-decoration: none;
+  color: white;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.searchedMovies {
+  border-radius: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(82, 82, 82, 0.5);
+}
+
+.activeBtn a {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.activeBtn img {
+  width: 28px;
+}
+
+/**MOVIE GRID*/
+.movieGrid {
+  display: grid;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+  position: relative;
+}
+
+.movieOverlay {
+  position: relative;
+}
+.heroMovies {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.singleMovie {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+  color: white;
+}
+
+.singleMovie img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.singleMovie div {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+.singleMovie div img {
+  height: 36px;
+  transition: 200ms;
+}
+
+.singleMovie div img:hover {
+  transform: scale(1.1);
+}
+
+/*  background-color: rgba(63, 40, 69, 0.8);*/
+/**OVERLAY MOVIE DETAILS*/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(45, 45, 45, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.movieBox {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: space-between;
+  background-color: rgb(192, 215, 186);
+}
+.movieInfo {
+  margin-left: 5%;
+}
+
+.movieImg img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 12px rgb(0, 0, 0);
+}
+
+#closeBtn {
+  cursor: pointer;
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(45, 45, 45, 0.8);
+}
+
+.movieInfo header h2 {
+  margin-bottom: 5px;
+}
+
+.movieInfo header {
+  margin-bottom: 20px;
+}
+
+.movieInfo section {
+  margin-bottom: 30px;
+}
+
+.movieInfo footer div {
+  height: 32px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.movieInfo footer div img {
+  height: 100%;
+  margin-right: 5px;
+}
+
+/**SAVED MOVIE*/
+.savedMovie {
+  display: flex;
+  margin-bottom: 15px;
+  background-color: rgb(192, 215, 186);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.savedMovie img {
+  height: 120px;
+}
+
+.savedMovieInfo {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.savedMovieButton {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.savedMovieButton button {
+  cursor: pointer;
+}
+
+.addMovieMessage {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addMovieMessage p {
+  background-color: rgba(45, 45, 45, 0.1);
+  box-shadow: 5px 5px 7px rgba(45, 45, 45, 0.8);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
